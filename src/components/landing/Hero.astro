@@ -1,6 +1,7 @@
 ---
 import Banner from "@/components/landing/Banner.astro";
-import Testimonials from "@/components/landing/Testimonials.astro";
+import Showcase from "@/components/landing/Showcase.astro";
+import Register from "@/components/form/Register.svelte";
 ---
 
 <section class="border-white/20  border-b">
@@ -13,17 +14,10 @@ import Testimonials from "@/components/landing/Testimonials.astro";
         <h2 class="text-white/60 font-display text-xl lg:text-3xl">
           Marking Milestones, Crafting Memories
         </h2>
-        <div class="pt-8 w-full flex">
-          <div class="bg-carrot py-3 flex flex-row items-center pl-6 pr-4 rounded-full text-xl text-white/80">
-            <span>Register Now</span>
-            <svg class="pl-2 w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-            </svg>
-          </div>
-        </div>
+        <Register client:load/>
       </div>
       <Banner />
-      <Testimonials />
+      <Showcase />
     </div>
   </div>
 </section>
