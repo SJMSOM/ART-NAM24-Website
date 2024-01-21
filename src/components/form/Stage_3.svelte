@@ -22,6 +22,7 @@
             <span class="text-white">What sports ignite your passion?</span>
             <input class="rounded-md" type="text" name="sport" id="alum-sports" bind:value={$formData.sports}>
             <span class="text-white">Would you like to pay now or on spot?</span>
+            <!-- TODO: Number of people coming -->
             <select class="rounded-md" name="payment" id="alum-pay" bind:value={$formData.payment}>
                 <option value="" selected disabled hidden>Select</option>
                 <option value="Now">Now</option>

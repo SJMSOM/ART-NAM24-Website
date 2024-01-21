@@ -3,7 +3,7 @@
     import { onMount } from 'svelte';
     import QRious from 'qrious'
 
-    let payment_url = `upi://pay?pa=iitbombaydonationaccount@icici&pn=SJMSOM%20-%20NAM%202024&am=${1000*$formData.tnom}&tr=${$formData.uid}tn=NAM2024%20-SOM&cu=INR`;
+    let payment_url = `upi://pay?pa=iitbombaydonationaccount@icici&pn=SJMSOM%20-%20NAM%202024&am=${1*$formData.tnom}&tr=${$formData.uid}tn=NAM2024%20-SOM&cu=INR`;
     let size = 200;
     let qr
 

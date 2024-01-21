@@ -11,6 +11,8 @@ export function postData(data, stage) {
     .then(data => {
         // Handle the response if needed
         console.log('Success:', data);
+        let cu = window.location.href;
+        window.history.pushState({ cu }, '', cu);
         stage++;
     })
     .catch((error) => {
