@@ -6,6 +6,5 @@ import svelte from "@astrojs/svelte";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), sitemap(), svelte()],
-  site: 'https://aasuss.github.io',
-  base: '/ART-Website',
+  site: 'https://alumni.sjmsom.in'
 });
