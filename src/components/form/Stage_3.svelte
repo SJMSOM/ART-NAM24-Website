@@ -3,6 +3,7 @@
     import { formData } from './store.js';
     
     export let stage;
+    let fam;
     
     function handleNext(){
         console.log("Sending: ", $formData)
@@ -21,8 +22,21 @@
         <div class="flex flex-col w-full">
             <span class="text-white">What sports ignite your passion?</span>
             <input class="rounded-md" type="text" name="sport" id="alum-sports" bind:value={$formData.sports}>
+            <span class="text-white">Are your family/friends accompanying you?</span>
+            <select class="rounded-md" name="fam" id="alum-fam" bind:value={fam}>
+                <option value="" selected disabled hidden>Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            {#if fam=="Yes" | $formData.tnom>1}
+            <span class="text-white">Number of people (Other than you)</span>
+            <div class="flex flex-row items-center">
+                <button class="py-2 px-4 mt-2 rounded-md text-white/80 bg-carrot" on:click={() => {if($formData.tnom-1!=0){$formData.tnom -= 1;}}}>-</button>
+                <span class="text-white text-2xl px-4">{ $formData.tnom-1 }</span>
+                <button class="py-2 px-4 mt-2 rounded-md text-white/80 bg-carrot" on:click={() => $formData.tnom += 1}>+</button>
+            </div>
+            {/if}
             <span class="text-white">Would you like to pay now or on spot?</span>
-            <!-- TODO: Number of people coming -->
             <select class="rounded-md" name="payment" id="alum-pay" bind:value={$formData.payment}>
                 <option value="" selected disabled hidden>Select</option>
                 <option value="Now">Now</option>
