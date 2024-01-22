@@ -6,7 +6,7 @@
     import Stage_4 from "./Stage_4.svelte";
     import Completed from "./Completed.svelte";
     
-    let stage = 4;
+    let stage = 0;
 
     onMount(() => {
         const handleCustomBack = () => {
